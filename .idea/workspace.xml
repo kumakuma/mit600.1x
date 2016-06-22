@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="561f7417-a580-405a-9d9a-cee1389bd524" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lec2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pset1.py" afterPath="$PROJECT_DIR$/pset1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lec3.py" />
     </list>
     <ignored path="mit600x.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lec2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lec2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lec2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lec3.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lec3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,6 +75,7 @@
       <list>
         <option value="$PROJECT_DIR$/pset1.py" />
         <option value="$PROJECT_DIR$/lec2.py" />
+        <option value="$PROJECT_DIR$/lec3.py" />
       </list>
     </option>
   </component>
@@ -443,6 +452,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lec3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
