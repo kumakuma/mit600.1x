@@ -21,7 +21,8 @@
 #           count += 1
 # print str(count)
 
-order = "hamburger water hamburger salad water"
+# Problem 3:
+# I noticed that the first letter of each item is different for each
 
 def item_order(order):
     h_count = 0
@@ -37,3 +38,19 @@ def item_order(order):
             w_count += 1
 
     print("salad:"+str(s_count)+" hamburger:"+str(h_count)+" water:"+str(w_count))
+
+def item_order2(order):
+    h_count = 0
+    w_count = 0
+    s_count = 0
+
+    words = []
+
+    
+    for letter in order:
+        if letter == ' '
+
+
+# test case:
+# order = "hamburger water hamburger salad water"
+# item_order(order)
