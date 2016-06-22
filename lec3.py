@@ -36,15 +36,31 @@
 
 
 #
-# ----- GUESS AND CHECK -----
+# ----- GUESS AND CHECK ----- #
+# ----- find the cube root -----
 #
-#  ----- find the cube root -----
+# x = int(raw_input('Enter an integer: '))
+# ans = 0
+# while ans**3 < x:
+#     ans = ans + 1
+# if ans**3 != x:
+#     print(str(x) + " is not a pefect cube")
+# else:
+#     print('Cube root of ' + str(x) + ' is ' + str(ans))
 
-x = int(raw_input('Enter an integer: '))
-ans = 0
-while ans**3 < x:
-    ans = ans + 1
-if ans**3 != x:
-    print(str(x) + " is not a pefect cube")
-else:
-    print('Cube root of ' + str(x) + ' is ' + str(ans))
+# ----- find the cube root +/- numbers -----
+#  exploits abs(x) function that returns absolute value of a number
+#
+# x = int(raw_input('Enter an integer: '))
+# ans = 0
+# while ans**3 < abs(x):
+#     ans += 1
+# if ans**3 != abs(x): # abs value of x
+#     print(str(x) + ' is not a perfect cube')
+# else:
+#     if x < 0:
+#         ans = - ans
+#     print('Cube root of ' + str(x) + ' is ' + str(ans))
+
+#
+# ----- 
