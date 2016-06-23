@@ -1,6 +1,8 @@
 # Complete Programming Experience:
 #
 # POLYSUM
+#
+# dan.smith.me@gmail.com
 
 import math
 

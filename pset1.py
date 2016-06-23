@@ -25,17 +25,30 @@
 # I noticed that the first letter of each item is different for each
 
 def item_order(order):
-    h_count = 0
-    w_count = 0
-    s_count = 0
+    hamburger = 0
+    salad = 0
+    water = 0
 
-    for letter in order:
-        if letter == 'h':
-            h_count += 1
-        elif letter == 's':
-            s_count += 1
-        elif letter == 'w':
-            w_count += 1
+    startspace = 0
+    space = 0
+
+    while space > -1:
+        space  = order.find(' ', startspace)
+        if space == -1:
+            word = order[startspace:]
+        else:
+            word = order[startspace:space]
+        if word == "salad":
+            salad += 1
+        if word == "hamburger":
+            hamburger += 1
+        if word == "water":
+            water += 1
+        startspace += 1
+    neworder = "salad:" + str(salad) + " hamburger:" + str(hamburger) + " water:" + str(water)
+    return neworder
+
+
 
     print("salad:"+str(s_count)+" hamburger:"+str(h_count)+" water:"+str(w_count))
 
