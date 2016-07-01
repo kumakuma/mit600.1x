@@ -94,3 +94,97 @@ def recurPowerNew(base, exp):
 # print(recurPower(3, 1))
 # print(recurPower(3, 3))
 # print(recurPower(-6, 6))
+
+
+# ----- L5 P4 ----- #
+def gcdIter(a, b):
+    """
+    :param a: positive integer
+    :param b: positive integer
+    :return: a positive integer, the greatest common divisor
+    """
+    result = a
+    while True:
+        if a % result == 0 and b % result == 0:
+            return result
+        else:
+            result -= 1
+            if result == 1:
+                return result
+
+
+# ----- L5 P5 ----- #
+def gcdRecur(a, b):
+    """
+    :param a: positive integer
+    :param b: positive integer
+    :return: a positive integer, the greatest common divisor
+    """
+    if b == 0:
+        return a
+    else:
+        return gcdRecur(b, a % b)
+#
+# # test cases
+# print(gcdIter(2,12))
+# print(gcdIter(6,12))
+# print(gcdIter(9,12))
+# print(gcdIter(17,12))
+#
+# print('-'*10)
+#
+# print(gcdRecur(2,12))
+# print(gcdRecur(6,12))
+# print(gcdRecur(9,12))
+# print(gcdRecur(17,12))
+
+# ----- END ----- #
+
+# Towers of Hanoi
+def print_move(fr, to):
+    print('Move from ' + str(fr) + ' to ' + str(to))
+
+
+def towers(n, fr, to, spare):
+    if n == 1:
+        print_move(fr, to)
+    else:
+        towers(n - 1, fr, spare, to)
+        towers(1, fr, to, spare)
+        towers(n - 1, spare, to, fr)
+
+# ----- Fibonacci ----- #
+def fibonacci(x):
+    """
+    :param x: int > 0
+    :return: fibonacci of x
+    """
+    assert type(x) == int and x >= 0
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return fibonacci(x - 1) + fibonacci(x - 2)
+
+# ----- End ----- #
+
+def isPalindrome(s):
+    def toChars(s):
+        s = s.lower()
+        ans = ''
+        for c in s:
+            if c in 'abcdefghijklmnopqrstuvwxyz':
+                ans = ans + c
+        return ans
+
+    def isPal(s):
+        if len(s) <= 1:
+            return True
+        else:
+            return s[0] == s[-1] and isPal(s[1:-1])
+
+    return isPal(toChars(s))
+
+print(isPalindrome('Helen'))
+print(isPalindrome('Hannah'))
+
+print(isPalindrome('Able was I ere I saw Elba'))
