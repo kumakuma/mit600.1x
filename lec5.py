@@ -184,7 +184,117 @@ def isPalindrome(s):
 
     return isPal(toChars(s))
 
-print(isPalindrome('Helen'))
-print(isPalindrome('Hannah'))
+# print(isPalindrome('Helen'))
+# print(isPalindrome('Hannah'))
+#
+# print(isPalindrome('Able was I ere I saw Elba'))
 
-print(isPalindrome('Able was I ere I saw Elba'))
+
+# ----- L5 P6 ----- #
+def lenIter(aStr):
+    '''
+    aStr: a string
+
+    returns: int, the length of aStr
+    '''
+
+    count = 0
+    for c in aStr:
+        count += 1
+
+    return count
+
+# print(lenIter('Daniel'))
+
+# ----- L5 P7 ----- #
+def lenRecur(aStr):
+    """
+    aStr: a string
+    returns: int, the length of aStr
+    """
+    if aStr == '':
+        return 0
+    else:
+        return 1 + lenRecur(aStr[0:-1])
+
+
+# ----- L5 P8 ----- #
+def isIn(char, aStr):
+    """
+    :param char: a single character
+    :param aStr: an alphabetized string
+    :return: True if char is in aStr; False otherwise
+    """
+    low = 0
+    high = len(aStr)
+    mid = (low + high) / 2
+
+    if aStr == '':
+        return False
+    elif aStr[mid] == char:
+        return True
+    elif len(aStr) == 1:
+        return aStr == char
+    else:
+        if char > aStr[mid]:
+            low = mid
+        else:
+            high = mid
+        return isIn(char, aStr[low:high])
+
+
+# ----- L5 P9 ----- #
+def semordnilapWrapper(str1, str2):
+    # a single length string cannot be a semordnilap
+    if len(str1) == 1 or len(str2) == 1:
+        return False
+
+    # equal strings cannot be semordnilap
+    if str1 == str2:
+        return False
+
+    return semordnilap(str1, str2)
+
+
+def semordnilap(str1, str2):
+    """
+    :param str1: a string
+    :param str2: a string
+    :return:    True if str1 and str2 are semordnilap;
+                False otherwise
+    """
+    if len(str1) != len(str2):
+        return False
+    # only need to check one string as both are same length
+    elif len(str1) == 1:
+        return str1 == str2
+
+    elif str1[0] != str2[-1]:
+            return False
+    else:
+        return semordnilap(str1[1:], str2[:-1])
+
+
+print(semordnilapWrapper('palindromes', 'semordnilap'))
+print(semordnilapWrapper('palindromes', ''))
+
+
+# ----- global variables ----- #
+def fibMetered(x):
+    global numCalls
+    numCalls += 1
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return fibMetered(x - 1) + fibMetered(x - 2)
+
+def testFib(n):
+    for i in range(n+1):
+        global numCalls
+        numCalls = 0
+        print('fib of ' + str(i) + ' = ' + str(fibMetered(i)))
+        print('fib called ' + str(numCalls) + ' times')
+
+
+testFib(5)
+
