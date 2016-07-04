@@ -6,6 +6,10 @@
 #
 
 
+def f(x):
+	import math
+	return 200*math.e**(math.log(0.5)/14.1 * x)
+
 def radiationExposure(start, stop, step):
     '''
     Computes and returns the amount of radiation exposed
@@ -22,4 +26,19 @@ def radiationExposure(start, stop, step):
       between start and stop times.
     '''
     # FILL IN YOUR CODE HERE...
+    result = 0
+    if step < 1:
+        numSteps = int((stop - start) * (1 / step))
+    else:
+        numSteps = int((stop - start) / step)
 
+    currentStep = start
+    for i in range(numSteps):
+        area = step * f(currentStep)
+        result += area
+        currentStep += step
+    return result
+
+print(radiationExposure(0, 40, 1))
+print(radiationExposure(72, 96, 0.4))
+print(radiationExposure(14, 20, 0.1))
