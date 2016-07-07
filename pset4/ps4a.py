@@ -244,10 +244,12 @@ def playHand(hand, wordList, n):
         # Display the hand\
         keys = ''
         for key in hand:
-            keys += key + ' '
+            for v in range(hand.get(key, 0)):
+                keys += key + ' '
         print("Current hand: " + keys)
         # Ask user for input
         word = str(raw_input('Enter word, or a "." to indicate that you are finished: '))
+        print"\n"
         # If the input is a single period:
         if word == '.':
             # End the game (break out of the loop)
