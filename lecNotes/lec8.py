@@ -96,15 +96,66 @@ def divide(x, y):
 #     except Exception, e:
 #         print e
 
-def FancyDivide(list_of_numbers, index):
-    try:
-        try:
-            denom = list_of_numbers[index]
-            for i in range(len(list_of_numbers)):
-                list_of_numbers[i] /= denom
-        finally:
-            raise Exception("0")
-    except Exception, e:
-        print e
+# def FancyDivide(list_of_numbers, index):
+#     try:
+#         try:
+#             denom = list_of_numbers[index]
+#             for i in range(len(list_of_numbers)):
+#                 list_of_numbers[i] /= denom
+#         finally:
+#             raise Exception("0")
+#     except Exception, e:
+#         print e
+#
+# FancyDivide([0,2,4], 0)
 
-FancyDivide([0,2,4], 0)
+# ----- error handling example ----- #
+def getSubjectStats(subject, weights):
+    return [[elt[0], elt[1], avg(elt[1], weights)] for elt in subject]
+
+
+def dotProcuct(a, b):
+    result = 0.0
+    for i in range(len(a)):
+        result += a[i] * b[i]
+    return result
+
+
+def avg(grades, weights):
+    try:
+        return dotProcuct(grades, weights) / len(grades)
+    except ZeroDivisionError:
+        print("No grades")
+        return 0.0
+
+
+# ----- Exceptions as control flow -----#
+def getRatios(v1, v2):
+    """
+    :param v1: list of numbers
+    :param v2: list of numbers
+    both v1 & v2 are of equal length
+    :return: a list containing meaningful values of v1[i] / v2[i]
+    """
+    ratios = []
+    for index in range(len(v1)):
+        try:
+            ratios.append(v1[index] / float(v2[index]))
+        except ZeroDivisionError:
+            ratios.append(float("NaN")) # NaN = Not a Number
+        except:
+            raise ValueError("getRatios called with bad arg")
+    return ratios
+
+
+# ----- Assertions ----- #
+def avg(grades, weights):
+    assert not len(grades) == 0, "no grades data"
+    assert len(grades) == len(weights), "wrong number of grades"
+
+    newgr = [convertLetterGrade(elt) for elt in grades]
+    result = dotProduct(newgr, weights) / len(newgr)
+    assert 0.0 <= result <= 100.0
+    return result
+
+

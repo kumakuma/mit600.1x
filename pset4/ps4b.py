@@ -6,7 +6,8 @@ import time
 #
 # Problem #6: Computer chooses a word
 #
-#
+# Modified by Dan Smith <dan> - 7/7/2016
+
 def compChooseWord(hand, wordList, n):
     """
     Given a hand and a wordList, find the word that gives 
@@ -23,25 +24,27 @@ def compChooseWord(hand, wordList, n):
 
     returns: string or None
     """
-    # BEGIN PSEUDOCODE <-- Remove this comment when you code this function; do your coding within the pseudocode (leaving those comments in-place!)
     # Create a new variable to store the maximum score seen so far (initially 0)
-
+    best_score = 0
     # Create a new variable to store the best word seen so far (initially None)  
+    best_word = None
 
     # For each word in the wordList
-
+    for word in wordList:
         # If you can construct the word from your hand
         # (hint: you can use isValidWord, or - since you don't really need to test if the word is in the wordList - you can make a similar function that omits that test)
 
+
+        if isValidWord(word, hand, wordList):
             # Find out how much making that word is worth
-
+            word_score = getWordScore(word, n)
             # If the score for that word is higher than your best score
-
+            if word_score > best_score:
                 # Update your best score, and best word accordingly
-
-
+                best_score = word_score
+                best_word = word
     # return the best word you found.
-
+    return best_word
 
 #
 # Problem #7: Computer plays a hand
@@ -65,8 +68,32 @@ def compPlayHand(hand, wordList, n):
     wordList: list (string)
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     """
-    # TO DO ... <-- Remove this comment when you code this function
-    
+    # keep track of the total score
+    total_score = 0
+
+    # As long as there are still letters left in the hand:
+    hand_total = sum(hand.itervalues())
+    while hand_total > 0:
+        # display the hand
+        keys = ''
+        for key in hand:
+            for v in range(hand.get(key, 0)):
+                keys += key + ' '
+        print "Current hand: ", keys
+
+        word = compChooseWord(hand, wordList, n)
+        if word == None:
+            break
+        else:
+            score = getWordScore(word, n)
+            total_score += score
+            hand = updateHand(hand, word)
+            print '"' + word + '" earned ' + str(score) + ' points. Total: ' + str(total_score) + ' points.'
+            hand_total = sum(hand.itervalues())
+    if hand_total != 0:
+        print "Goodbye! Total score: " + str(total_score) + " points."
+    else:
+        print "Run out of letters.  Total score: " + str(total_score) + " points."
 #
 # Problem #8: Playing a game
 #
