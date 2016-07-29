@@ -184,14 +184,22 @@ class Grades(object):
         except KeyError:
             raise ValueError('Student not in grade book')
 
+    # def allStudents(self):
+    #     """ Return a list of the students in the grade book"""
+    #     if not self.isSorted:
+    #         self.students.sort()
+    #         self.isSorted = True
+    #     # return copy of the list of students
+    #     return self.students[:]
+
+    #  Improved allStudents method using generator
+    #  loop yields one at a time.  rather than returning a copy of whole list
     def allStudents(self):
-        """ Return a list of the students in the grade book"""
         if not self.isSorted:
             self.students.sort()
             self.isSorted = True
-        # return copy of the list of students
-        return self.students[:]
-
+        for s in self.students:
+            yield s
 
 def gradeReport(course):
     """ Assumes: course is of type grades"""
@@ -209,25 +217,73 @@ def gradeReport(course):
             report.append((str(s) + ' has no grades'))
         return '\n'.join(report)
 
-# test
-ug1 = UG('Jane Doe', 2014)
-ug2 = UG('John Doe', 2015)
-ug3 = UG('David Henry', 2003)
-g1 = Grad('John Henry')
-g2 = Grad('George Steinbrenner')
+# # test
+# ug1 = UG('Jane Doe', 2014)
+# ug2 = UG('John Doe', 2015)
+# ug3 = UG('David Henry', 2003)
+# g1 = Grad('John Henry')
+# g2 = Grad('George Steinbrenner')
+#
+# six00 = Grades()
+# six00.addStudent(g1)
+# six00.addStudent(ug2)
+# six00.addStudent(ug1)
+# six00.addStudent(g2)
+#
+# for s in six00.allStudents():
+#     six00.addGrade(s, 75)
+# six00.addGrade(g1, 100)
+# six00.addGrade(g2, 25)
+#
+# six00.addStudent(ug3)
 
-six00 = Grades()
-six00.addStudent(g1)
-six00.addStudent(ug2)
-six00.addStudent(ug1)
-six00.addStudent(g2)
 
-for s in six00.allStudents():
-    six00.addGrade(s, 75)
-six00.addGrade(g1, 100)
-six00.addGrade(g2, 25)
-
-six00.addStudent(ug3)
-
+#  Generators
+def genFib():
+    fibn_1 = 1   # fib(n-1)
+    fibn_2 = 0   # fib(n-2)
+    while True:
+        # fib(n) = fib(n-1) + fib(n-2)
+        next = fibn_1 + fibn_2
+        yield next
+        fibn_2 = fibn_1
+        fibn_1 = next
 
 
+# foo = genFib()
+# for n in range(100):
+#     print(foo.next())
+
+# see above for improved allStudents method
+
+# L12 P5 - genPrimes
+def genPrimes():
+    next = 2
+    primes = [next]
+    yield primes[-1]
+    while True:
+        next += 1
+        r = True
+        for p in primes:
+            if next % p == 0:
+                r = False
+        if r:
+            primes.append(next)
+            yield primes[-1]
+
+foo = genPrimes()
+for i in range(10):
+    num = foo.next()
+    # if i%10 == 0:
+    #     print num
+    print num
+
+
+def doubleDays(days):
+    res = 1
+    while days > 0:
+        res *= 2
+        days -= 1
+    return res
+
+print doubleDays(30)
