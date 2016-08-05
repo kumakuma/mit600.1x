@@ -119,23 +119,23 @@ def build_d_tree(sofar, todo):
 
 
 def dfs_d_tree(root, value_fcn, constraint_fcn):
-    stack = [root]
+    queue = [root]
     best = None
     visited = 0
-    while len(stack) > 0:
+    while len(queue) > 0:
         visited += 1
-        if constraint_fcn(stack[0].get_value()):
-            if best == None:
-                best = stack[0]
-            elif value_fcn(stack[0].get_value()) > value_fcn(best.get_value()):
-                best = stack[0]
-            temp = stack[0]
+        if constraint_fcn(queue[0].get_value()):
+            if best is None:
+                best = queue[0]
+            elif value_fcn(queue[0].get_value()) > value_fcn(best.get_value()):
+                best = queue[0]
+            temp = queue.pop(0)
             if temp.get_right_branch():
-                stack.insert(0, temp.get_right_branch())
+                queue.insert(0, temp.get_right_branch())
             if temp.get_left_branch():
-                stack.insert(0, temp.get_left_branch())
+                queue.insert(0, temp.get_left_branch())
         else:
-            stack.pop(0)
+            queue.pop(0)
     print 'visited', visited
     return best
 

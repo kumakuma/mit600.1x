@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="561f7417-a580-405a-9d9a-cee1389bd524" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lecNotes/lec13_trees.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lecNotes/lec13_wrapping_up.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lecNotes/lec13_trees.py" afterPath="$PROJECT_DIR$/lecNotes/lec13_trees.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lecNotes/lec13_wrapping_up.py" afterPath="$PROJECT_DIR$/lecNotes/lec13_wrapping_up.py" />
     </list>
     <ignored path="mit600x.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +46,7 @@
     <SUITE FILE_PATH="coverage/mit600x$lec3.coverage" NAME="lec3 Coverage Results" MODIFIED="1466667981210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/mit600-1x$_L12_hand.coverage" NAME="_L12_hand Coverage Results" MODIFIED="1469525177471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lecNotes" />
     <SUITE FILE_PATH="coverage/mit600-1x$Doctests_in_ps6__1_.coverage" NAME="Doctests in ps6 (1) Coverage Results" MODIFIED="1470036865524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pset6" />
-    <SUITE FILE_PATH="coverage/mit600-1x$lec13_trees.coverage" NAME="lec13_trees Coverage Results" MODIFIED="1470156519231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lecNotes" />
+    <SUITE FILE_PATH="coverage/mit600-1x$lec13_trees.coverage" NAME="lec13_trees Coverage Results" MODIFIED="1470329203539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lecNotes" />
     <SUITE FILE_PATH="coverage/mit600x$pset2_p3.coverage" NAME="pset2_p3 Coverage Results" MODIFIED="1466938509401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/mit600x$pset3.coverage" NAME="pset3 Coverage Results" MODIFIED="1467499412467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -60,33 +59,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ps7_skeleton.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pset7/ps7_skeleton.py">
+      <file leaf-file-name="lec13_trees.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lecNotes/lec13_trees.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lec13_wrapping_up.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lecNotes/lec13_wrapping_up.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="383">
+              <caret line="156" column="25" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lec12_OOP.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lecNotes/lec12_OOP.py">
+      <file leaf-file-name="lec13_wrapping_up.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lecNotes/lec13_wrapping_up.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4185">
-              <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+            <state relative-caret-position="443">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,9 +126,9 @@
         <option value="$PROJECT_DIR$/lecNotes/_L12_hand.py" />
         <option value="$PROJECT_DIR$/lecNotes/lec12_OOP.py" />
         <option value="$PROJECT_DIR$/pset6/ps6.py" />
+        <option value="$PROJECT_DIR$/pset7/ps7_skeleton.py" />
         <option value="$PROJECT_DIR$/lecNotes/lec13_trees.py" />
         <option value="$PROJECT_DIR$/lecNotes/lec13_wrapping_up.py" />
-        <option value="$PROJECT_DIR$/pset7/ps7_skeleton.py" />
       </list>
     </option>
   </component>
@@ -241,7 +228,7 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.ps7_skeleton">
+  <component name="RunManager" selected="Python.lec13_trees">
     <configuration default="false" name="Doctests in ps6" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -574,8 +561,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ps7_skeleton" />
-        <item index="1" class="java.lang.String" itemvalue="Python.lec13_trees" />
+        <item index="0" class="java.lang.String" itemvalue="Python.lec13_trees" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ps7_skeleton" />
         <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in ps6 (2)" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in ps6" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in ps6 (1)" />
@@ -840,14 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lecNotes/lec13_wrapping_up.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lecNotes/lec12_OOP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4185">
@@ -880,21 +859,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pset7/ps7_skeleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="220" column="29" selection-start-line="220" selection-start-column="29" selection-end-line="220" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lecNotes/lec13_trees.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+        <state relative-caret-position="383">
+          <caret line="156" column="25" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pset7/ps7_skeleton.py">
+    <entry file="file://$PROJECT_DIR$/lecNotes/lec13_wrapping_up.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="443">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
